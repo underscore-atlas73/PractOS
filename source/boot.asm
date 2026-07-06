@@ -24,20 +24,6 @@ _start:
 	push %ebx
 	push %eax
 
-	#dont need to push EAX cuz we dont need it; TODO: custom ABI, update list
-	call detectCPUID
-
-	test %eax, %eax
-	jnz __validCPU00
-
-	hlt
-
-__validCPU00:
-	mov $0x0, %eax
-	cpuid
-
-	call displayVendorIDStringRegister
-
 	#zero out tables
 	movl $PML4_TABLE, %edi
 	movl $3072, %ecx
@@ -88,26 +74,30 @@ map_pd_loop:
 
 	lgdt GDT64_POINTER
 
+	popl %eax
+	popl %ebx
+
 	ljmp $0x08, $_start64
 #END 32 BIT CODE
 #64 bit yay
 .code64
 _start64:
-	mov $0x10, %ax
+	movl %eax, %edi #x64 System V ABI registers; passes multiboot shtuff to kmain
+	movl %ebx, %esi
+
+	mov $0x0, %ax
 	mov %ax, %ds
 	mov %ax, %es
 	mov %ax, %fs
 	mov %ax, %gs
 	mov %ax, %ss
 
-	pop %rdi #x64 System V ABI registers; passes multiboot shtuff to kmain
-	pop %rsi
-
 	#movq $0xB8000, %rax # cga memory (thank GOD for identity mapping)
 	#movb $'X', (%rax) # display x
 	#movb $0x0F, 1(%rax) # one plus rax addr
 
-	#call kmain
+	.extern kmain
+	call kmain
 
 	#should be unreachable, halt
 1:	hlt
