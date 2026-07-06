@@ -15,6 +15,7 @@ A practice operating system (for now).
 ## Planned Features
  
 - Processes
+- Syscalls (custom calling convention)
 - Basic ACPI Parsing
 - PCI Parsing
 - AHCI Driver
