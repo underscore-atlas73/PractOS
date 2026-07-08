@@ -5,11 +5,13 @@ A practice operating system (for now).
 
 ## Roadmap
 
+- [ ] A name
+
 - [x] Cross-Compiler Setup
 - [x] x86_32 to x86_64 Bootstrapper
 - [x] Legacy VGA text-mode Display Driver
 - [x] Legacy 8259 PIC Driver
-- [ ] Legacy PIT Clock
+- [ ] Legacy PIT Sysclock
 - [ ] Legacy PS/2 Keyboard Driver
 - [ ] RTC Driver
 - [ ] Dynamic Memory Allocation (Heap)
