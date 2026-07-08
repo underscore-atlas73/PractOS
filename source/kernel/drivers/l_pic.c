@@ -1,7 +1,7 @@
 #include <kernel/io.h>
 #include <kernel/drivers/l_pic.h>
 
-void IRQ_set_mask(uint8_t IRQline) {
+void PIC_set_mask(uint8_t IRQline) {
 	uint16_t port;
 	uint8_t value;
 
@@ -22,7 +22,7 @@ void IRQ_set_mask(uint8_t IRQline) {
 	outb(port, value);
 }
 
-void IRQ_clear_mask(uint8_t IRQline) {
+void PIC_clear_mask(uint8_t IRQline) {
 	uint16_t port;
 	uint8_t value;
 
@@ -43,7 +43,7 @@ void IRQ_clear_mask(uint8_t IRQline) {
 	outb(port, value);
 }
 
-void pic_remap(int offset1, int offset2) {
+void PIC_remap(int offset1, int offset2) {
 	uint8_t a1, a2;
 
 	// Save interrupt masks
@@ -80,7 +80,7 @@ void pic_remap(int offset1, int offset2) {
 	outb(PIC2_DATA, a2);
 }
 
-void pic_send_eoi(uint8_t irq) {
+void PIC_send_eoi(uint8_t irq) {
 	if (irq >= 8) {
 		// If interrupt came from Slave PIC, we must tell both!
 		outb(PIC2_COMMAND, PIC_EOI);

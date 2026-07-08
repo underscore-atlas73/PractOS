@@ -12,9 +12,9 @@
 
 #define PIC_EOI 0x20
 
-void IRQ_set_mask(uint8_t);
-void IRQ_clear_mask(uint8_t);
-void pic_remap(int offset1, int offset2);
-void pic_send_eoi(uint8_t irq);
+void PIC_set_mask(uint8_t);
+void PIC_clear_mask(uint8_t);
+void PIC_remap(int offset1, int offset2);
+void PIC_send_eoi(uint8_t irq);
 
 #endif

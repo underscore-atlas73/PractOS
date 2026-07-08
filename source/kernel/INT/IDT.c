@@ -46,6 +46,8 @@ extern void eISR29();
 extern void eISR30();
 extern void eISR31();
 
+extern void IRQ0();
+
 extern void load_idt(uint64_t idtptr_addr);
 extern uint8_t __KERNEL_GDT;
 
@@ -89,6 +91,8 @@ void idt_init(void) {
 	idt_set_gate(29, (uint64_t)eISR29, __KERNEL_GDT, 0x8E);
 	idt_set_gate(30, (uint64_t)eISR30, __KERNEL_GDT, 0x8E);
 	idt_set_gate(31, (uint64_t)eISR31, __KERNEL_GDT, 0x8E);
+
+	idt_set_gate(32, (uint64_t)IRQ0, __KERNEL_GDT, 0x8E);
 
 	load_idt((uint64_t)&idtptr);
 }

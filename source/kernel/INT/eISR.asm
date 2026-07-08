@@ -1,4 +1,4 @@
-.extern e_interrupt_service_routine
+.extern master_ISR
 
 # Macro for exceptions that DO NOT push an error code
 .macro eISR_NOERRCODE num
@@ -7,7 +7,7 @@ eISR\num:
 	cli
 	pushq $0		  # Push dummy error code
 	pushq $\num	   	  # Push the interrupt number
-	jmp eISR_common_stub
+	jmp ISR_common_stub
 .endm
 
 # Macro for exceptions that DO push an error code
@@ -16,7 +16,7 @@ eISR\num:
 eISR\num:
 	cli
 	pushq $\num	   	  # Push the interrupt number
-	jmp eISR_common_stub
+	jmp ISR_common_stub
 .endm
 
 # --- Standard Exceptions ---
@@ -56,7 +56,9 @@ eISR_ERRCODE   29 # VMM Communication Exception
 eISR_ERRCODE   30 # Security Exception
 eISR_NOERRCODE 31 # Reserved
 
-eISR_common_stub:
+.global ISR_common_stub
+.type ISR_common_stub, @function
+ISR_common_stub:
 	# 1. Save all general-purpose registers (Relavent to SysV ABI)
 	pushq %rax
 	pushq %rbx
@@ -77,7 +79,7 @@ eISR_common_stub:
 	# 2. Call the C handler
 	# Pass the current stack pointer (%rsp) as the first argument (%rdi)
 	movq %rsp, %rdi
-	call e_interrupt_service_routine
+	call master_ISR
 
 	# 3. Restore all general-purpose registers
 	popq %r15
