@@ -5,7 +5,7 @@ A hobby operating system turned passion-project. PURACS is an operating system d
 This project will never use AI "code."
   
 ### Working Name Clarification
-PURAC may be referred to as System73, Sys73, SystemLXXIII, or LynXX(III) in some locations. These are all synonyms for PURACS created due to my own indecision.
+PURACS may be referred to as System73, Sys73, SystemLXXIII, or LynXX(III) in some locations. These are all synonyms for PURACS created due to my own indecision.
 
 # Roadmap
    
