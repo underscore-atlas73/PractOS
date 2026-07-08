@@ -10,7 +10,7 @@ SECTIONS
 	.multiboot_header BLOCK(4K) : {
 		*(.multiboot_header)
 	}
-
+	
 	.text BLOCK(4K) : {
 		*(.text)
 	}

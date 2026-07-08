@@ -1,24 +1,23 @@
 #include <stdint.h>
+#include <stdio.h>
+
+#include <kernel/drivers/l_vga.h>
+#include <kernel/l_tty.h>
+
+#include <kernel/drivers/l_pic.h>
+
+#include <kernel/INT/IDT.h>
 
 void kmain(uint32_t magic, uint32_t mbi_pointer) {
-	volatile uint16_t* vga_buffer = (volatile uint16_t*)0xB8000;
+	terminal_init();
 
-	const char* str = "Successfully entered 64-bit Long Mode natively via Multiboot2!";
-	const char* failStr = "Invalid Multiboot2 Magic recieved! Bailing out...";
+	////////////////INTERRUPTS//////////////////
+	idt_init();
 
-	if (magic != 0x36D76289) {
-		for (int i = 0; failStr[i] != '\0'; i++) {
-			// High byte: Color attribute (0x0F = White text on Black background)
-			// Low byte: Character ASCII code
-			vga_buffer[i] = (uint16_t)failStr[i] | (0x07 << 8);
-		}
-		return;
+	pic_remap(0x20, 0x28);
+	for (uint8_t i = 0; i < 16; i++) {
+    		IRQ_set_mask(i);
 	}
-
-
-	for (int i = 0; str[i] != '\0'; i++) {
-		// High byte: Color attribute (0x0F = White text on Black background)
-		// Low byte: Character ASCII code
-		vga_buffer[i] = (uint16_t)str[i] | (0x07 << 8);
-	}
+	sti();
+	////////////////////////////////////////////
 }

@@ -15,7 +15,7 @@ header_end:
 .code32
 .global _start
 .type _start, @function
-.include "include/CPUID.asm"
+#.include "include/CPUID.asm"
 _start:
 	cli 			#dis interrupts
 	mov $stack_top, %esp	#init stack pointer
@@ -113,6 +113,9 @@ GDT64:
 GDT64_POINTER:
 	.word . - GDT64 - 1
 	.quad GDT64
+.global __KERNEL_GDT
+__KERNEL_GDT:
+	.byte 0x08
 
 #stack and page tables
 .section .bss
