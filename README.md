@@ -15,7 +15,7 @@ PURACS may be referred to as System73, Sys73, SystemLXXIII, or LynXX(III) in som
 - [x] x86_32 to x86_64 Bootstrapper
 - [x] Legacy VGA text-mode Display Driver
 - [x] Legacy 8259 PIC Driver
-- [ ] Legacy PIT Sysclock
+- [X] Legacy PIT Sysclock
 - [ ] Legacy PS/2 Keyboard Driver
 - [ ] RTC Driver
 - [ ] Dynamic Memory Allocation (Heap)
