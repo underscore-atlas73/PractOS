@@ -7,8 +7,11 @@ A practice operating system (for now).
 
 - [x] Cross-Compiler Setup
 - [x] x86_32 to x86_64 Bootstrapper
-- [ ] Legacy VGA text-mode Display Driver
+- [x] Legacy VGA text-mode Display Driver
+- [x] Legacy 8259 PIC Driver
+- [ ] Legacy PIT Clock
 - [ ] Legacy PS/2 Keyboard Driver
+- [ ] RTC Driver
 - [ ] Dynamic Memory Allocation (Heap)
 - TODO
 
