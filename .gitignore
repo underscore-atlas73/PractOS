@@ -3,3 +3,4 @@
 *.save
 *.swp
 iso/
+.cache/

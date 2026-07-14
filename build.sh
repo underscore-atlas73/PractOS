@@ -1,6 +1,6 @@
 COMPILER_DEFINES="-D__is_libk"
 SYSROOT_FLAG="-I ../build-sysroot/usr/include/"
-COMPILER_FLAGS="-ffreestanding -Wall -Wextra $SYSROOT_FLAG $COMPILER_DEFINES"
+COMPILER_FLAGS="-ffreestanding -Wall -Wextra -mno-red-zone $SYSROOT_FLAG $COMPILER_DEFINES"
 LINKER_FLAGS="-nostdlib"
 
 mkdir -p build-sysroot/usr/include

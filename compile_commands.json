@@ -1,0 +1,414 @@
+[
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-c",
+      "-x",
+      "assembler",
+      "-I",
+      "include/",
+      "./boot.asm"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/boot.asm"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-c",
+      "-x",
+      "assembler",
+      "-I",
+      "include/",
+      "./kernel/INT/IRQ.asm"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/INT/IRQ.asm"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-c",
+      "-x",
+      "assembler",
+      "-I",
+      "include/",
+      "./kernel/INT/loadIDT.asm"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/INT/loadIDT.asm"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-c",
+      "-x",
+      "assembler",
+      "-I",
+      "include/",
+      "./kernel/INT/eISR.asm"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/INT/eISR.asm"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/stdio/printf.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/stdio/printf.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/stdio/putchar.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/stdio/putchar.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/stdio/puts.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/stdio/puts.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/stdlib/abort.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/stdlib/abort.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/PURACS/chrono.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/PURACS/chrono.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/memmove.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/memmove.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/itoa.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/itoa.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/memrev.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/memrev.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/memcmp.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/memcmp.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/i64toa.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/i64toa.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/strlen.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/strlen.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/memset.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/memset.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./libc/string/memcpy.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/libc/string/memcpy.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/kernel.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/kernel.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/drivers/l_pic.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/drivers/l_pic.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/drivers/l_kb.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/drivers/l_kb.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/drivers/pit.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/drivers/pit.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/l_tty.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/l_tty.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/INT/master_ISR.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/INT/master_ISR.c"
+  },
+  {
+    "arguments": [
+      "/home/atlas/opt/cross/bin//x86_64-elf-gcc",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mno-red-zone",
+      "-I",
+      "../build-sysroot/usr/include/",
+      "-D__is_libk",
+      "-c",
+      "-I",
+      "include/",
+      "./kernel/INT/IDT.c"
+    ],
+    "directory": "/home/atlas/OS-DEV/SYS73/source",
+    "file": "/home/atlas/OS-DEV/SYS73/source/kernel/INT/IDT.c"
+  }
+]

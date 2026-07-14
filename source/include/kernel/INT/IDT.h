@@ -14,7 +14,7 @@ static inline void sti(void) {
 // A single entry (16 bytes)
 struct idt_entry_64 {
     uint16_t offset_low;        // Lower 16 bits of the ISR address
-    uint16_t segment_selector;  // Kernel Code Segment selector (from your GDT)
+    uint16_t segment_selector;  // Kernel Code Segment selector
     uint8_t  ist;               // Interrupt Stack Table offset (0 for now); THIS WILL BE USED FOR TASKS
     uint8_t  type_attributes;   // Gate type, DPL, and Present flags
     uint16_t offset_mid;        // Middle 16 bits of the ISR address

@@ -102,5 +102,5 @@ ISR_common_stub:
 	addq $16, %rsp
 
 	# 5. Return from interrupt
-	sti
+	#sti
 	iretq

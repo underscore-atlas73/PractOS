@@ -1,3 +1,4 @@
+#include "kernel/drivers/l_pic.h"
 #include <kernel/drivers/pit.h>
 
 volatile uint64_t sysclock = 0;
@@ -16,5 +17,5 @@ void pit_init(uint32_t frequency) {
 
 void PIT_handler(struct InterruptState *state) {
 	sysclock++;
-	PIC_send_eoi(0);
+	PIC_send_eoi(PIC_PIT);
 }

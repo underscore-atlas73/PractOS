@@ -42,6 +42,10 @@ void master_ISR(struct InterruptState* state) {
 		PIT_handler(state);
 		return;
 	}
+	if (state->int_no == 33) {
+		KB_handler(state);
+		return;
+	}
 	//while(1) {
 		printf("EXCEPTION THROWN: %u (%s) WITH CODE %u\nRIP: %p\n", state->int_no, E_NAMES[state->int_no],state->err_code, state->rip);
 		//__asm__ volatile ("hlt");

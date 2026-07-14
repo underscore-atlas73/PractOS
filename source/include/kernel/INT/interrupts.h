@@ -20,6 +20,7 @@ struct InterruptState{
 	uint64_t ss;
 } __attribute__((packed));
 
-extern void PIT_handler();
+extern void PIT_handler(struct InterruptState*);
+extern void KB_handler(struct InterruptState*);
 
 #endif
